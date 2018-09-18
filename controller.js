@@ -109,8 +109,8 @@ angular.module('app').controller('AppController', function($scope, $http) {
     if (records.shops) category.push('shops');
     if (records.outdoors) category.push('outdoors');
 
-    var clientID = "1N2JKDNNR0WBMX5OQ2WB0RRYO35SJUBPEWDF5UFYOAR1MYHW";
-    var clientSecret = "GOBQQHH4HMT2YZPRPJWTXKXB4NRXSXXXOVHYMFYBYRHYVPH1";
+    var clientID = "YZQZP1Q2HEJWMD5ZVBMIQD3VSZC1W4BQCCQTVFEPJWNHL0RK";
+    var clientSecret = "ORHPL2VKKHUTB3KTJVDTB4D20AXBRCFKWVL12EPQNJNDFYBX";
 
     $http.get("https://api.foursquare.com/v2/venues/explore/?near=" + $scope.obj.searchString + "&venuePhotos=1&section=" + category.join(',') + "&client_id=" + clientID + "&client_secret=" + clientSecret + "&v=20131124")
       .then(function(result, status) {
